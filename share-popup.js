@@ -37,10 +37,13 @@ SharePopUp.facebook = function(url,width,height,blank) {
 };
 
 SharePopUp.pinterest = function(url,imageUrl,description,width,height,blank) {
+    description = description||'';
     this.popup('https://pinterest.com/pin/create/button/?url='+this.rawurlencode(url)+'&media='+this.rawurlencode(imageUrl)+'&description='+this.rawurlencode(description),width,height,blank);
 };
 
 SharePopUp.linkedIn = function(url,title,summary,source,width,height,blank) {
+    summary = summary||'';
+    source = source||'';
     this.popup('https://www.linkedin.com/shareArticle?mini=true&url='+this.rawurlencode(url)+'&title='+this.rawurlencode(title)+'&summary='+this.rawurlencode(summary)+'&source='+this.rawurlencode(source),width,height,blank);
 };
 
@@ -49,5 +52,10 @@ SharePopUp.googlePlus = function(url,width,height,blank) {
 };
 
 SharePopUp.email = function(to,cc,bcc,subject,body,width,height,blank) {
+    to = to||'';
+    cc = cc||'';
+    bcc = bcc||'';
+    subject = subject||'';
+    body = body||'';
     this.popup('mailto:'+this.rawurlencode(to)+'?&cc='+this.rawurlencode(cc)+'&bcc='+this.rawurlencode(bcc)+'&subject='+this.rawurlencode(subject)+'&body='+this.rawurlencode(body),width,height,blank);
 };
