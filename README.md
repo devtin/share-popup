@@ -30,3 +30,6 @@ SharePopUp.linkedIn ( url , tittle , summary , source [, width , height , blank 
 SharePopUp.googlePlus ( url [, width , height , blank ] )
 SharePopUp.email ( to , cc , bcc , subject , body [, width , height , blank ] )
 ```
+
+## License
+MIT
