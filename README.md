@@ -22,9 +22,11 @@ Most methods share the same last three parameters: width, height and blank. **wi
  
 The **blank** parameter basically overrides the **width** and **height** and basically opens the share screen on a new window instead of in a pop-up window. 
 
+```js
 SharePopUp.twitter ( text [, width , height , blank ] )
 SharePopUp.facebook ( url [, width , height , blank ] )
 SharePopUp.pinterest ( url , imageUrl , description [, width , height , blank ] )
 SharePopUp.linkedIn ( url , tittle , summary , source [, width , height , blank ] )
 SharePopUp.googlePlus ( url [, width , height , blank ] )
 SharePopUp.email ( to , cc , bcc , subject , body [, width , height , blank ] )
+```
