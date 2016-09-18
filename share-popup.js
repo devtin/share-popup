@@ -1,7 +1,7 @@
 /**
  * @license
  * MIT
- *
+ * https://github.com/devtin/share-popup
  */
 
 var SharePopUp = {};
