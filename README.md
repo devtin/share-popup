@@ -1,5 +1,7 @@
 # share-popup.js
 
+A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn and Google+.
+
 ## Usage
 
 ```js
