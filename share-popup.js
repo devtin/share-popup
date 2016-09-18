@@ -25,7 +25,7 @@ SharePopUp.popup = function(url,w,h,blank) {
     var left = Math.round((screen.width-(w))/2),
         top = Math.round((screen.height-(h))/2);
 
-    window.open(url,'share',blank ? null : 'width='+w+',height='+h+',toolbars=no,left='+left+',top='+top);
+    window.open(url,'share',blank ? undefined : 'width='+w+',height='+h+',toolbars=no,left='+left+',top='+top);
 };
 
 SharePopUp.twitter = function(text,width,height,blank) {
@@ -52,10 +52,21 @@ SharePopUp.googlePlus = function(url,width,height,blank) {
 };
 
 SharePopUp.email = function(to,cc,bcc,subject,body,width,height,blank) {
-    to = to||'';
-    cc = cc||'';
-    bcc = bcc||'';
-    subject = subject||'';
-    body = body||'';
-    this.popup('mailto:'+this.rawurlencode(to)+'?&cc='+this.rawurlencode(cc)+'&bcc='+this.rawurlencode(bcc)+'&subject='+this.rawurlencode(subject)+'&body='+this.rawurlencode(body),width,height,blank);
+    var opts = {
+        cc      : cc||'',
+        bcc     : bcc||'',
+        subject : subject||'',
+        body    : body||''
+    };
+
+    var eopts = [];
+
+    for (var i in opts) {
+        if (!opts.hasOwnProperty(i) || !opts[i]) continue;
+        eopts.push(i+'='+this.rawurlencode(opts[i]));
+    }
+
+    var url = 'mailto:'+(to||'')+'?'+eopts.join('&');
+
+    ('ontouchstart' in window) ? top.location.href=url : this.popup(url,width,height,blank);
 };
