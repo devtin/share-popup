@@ -1,0 +1,263 @@
+<html lang="en">
+<title>SharePopUp</title>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../share-popup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+        pre {
+            padding:10px!important;
+            border-color:#d7d7d7!important;
+        }
+
+        * {
+            outline:none!important;
+        }
+
+        code {
+            display: inline-block;
+            margin-bottom: 2em;
+        }
+
+        .example + .example {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <h1>SharePopUp - v1.1</h1>
+        <p class="lead">A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn and Google+. Now also via Whatsapp and SMS.</p>
+
+        <h2>Usage</h2>
+        <ul class="list-style lead">
+            <li><a href="#twitter">Twitter</a></li>
+            <li><a href="#facebook">Facebook</a></li>
+            <li><a href="#pinterest">Pinterest</a></li>
+            <li><a href="#linkedin">LinkedIn</a></li>
+            <li><a href="#googleplus">Google+</a></li>
+            <li><a href="#email">E-mail</a></li>
+            <li><a href="#whatsapp">Whatsapp</a></li>
+            <li><a href="#sms">SMS</a></li>
+        </ul>
+
+        <h3>Demo Variables</h3>
+        <pre class="prettyprint">var url     = "http://devtin.io",
+    title   = "Professional Lego Player",
+    text    = "Have a look at this website: "+url,
+    image   = "http://devtin.io/wp-content/uploads/2015/03/logo-web-01-150x150.png",
+    email   = "tin@example.com",
+    cc      = "cc@example.com",
+    bcc     = "bcc@example.com";</pre>
+
+        <!-- Twitter -->
+
+        <h3 class="new-sec"><a name="twitter"></a>Twitter</h3>
+        <code>SharePopUp.twitter ( text [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.twitter(text);</pre>
+            <button class="btn btn-default">Share on Twitter</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger window:</p>
+            <pre class="prettyprint">SharePopUp.twitter(text,1024,768);</pre>
+            <button class="btn btn-default">Share on Twitter (bigger)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New window:</p>
+            <pre class="prettyprint">SharePopUp.twitter(text,null,null,true);</pre>
+            <button class="btn btn-default">Share on Twitter (new window)</button>
+        </div>
+
+        <!-- Facebook -->
+
+        <h3 class="new-sec"><a name="facebook"></a>Facebook</h3>
+        <code>SharePopUp.facebook ( url [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.facebook(url);</pre>
+            <button class="btn btn-default">Share on Facebook</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger window:</p>
+            <pre class="prettyprint">SharePopUp.facebook(url,1024,768);</pre>
+            <button class="btn btn-default">Share on Facebook (bigger)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New window:</p>
+            <pre class="prettyprint">SharePopUp.facebook(url,null,null,true);</pre>
+            <button class="btn btn-default">Share on Facebook (new window)</button>
+        </div>
+
+        <!-- Pinterest -->
+
+        <h3 class="new-sec"><a name="pinterest"></a>Pinterest</h3>
+        <code>SharePopUp.pinterest ( url , imageUrl , description [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.pinterest(url,image,text);</pre>
+            <button class="btn btn-default">Share on Pinterest</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.pinterest(url,image,text,1024,768);</pre>
+            <button class="btn btn-default">Share on Pinterest (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.pinterest(url,image,text,null,null,true);</pre>
+            <button class="btn btn-default">Share on Pinterest (new window)</button>
+        </div>
+
+        <!-- LinkedIn -->
+
+        <h3 class="new-sec"><a name="linkedin"></a>LinkedIn</h3>
+        <code>SharePopUp.linkedIn ( url , tittle , summary , source [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.linkedIn(url,title,text,url);</pre>
+            <button class="btn btn-default">Share on LinkedIn</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.linkedIn(url,title,text,url,1024,768);</pre>
+            <button class="btn btn-default">Share on LinkedIn (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.linkedIn(url,title,text,url,null,null,true);</pre>
+            <button class="btn btn-default">Share on LinkedIn (new window)</button>
+        </div>
+
+        <!-- Google+ -->
+
+        <h3 class="new-sec"><a name="googleplus"></a>Google+</h3>
+        <code>SharePopUp.googlePlus ( url [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.googlePlus(url);</pre>
+            <button class="btn btn-default">Share on Google+</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.googlePlus(url,1024,768);</pre>
+            <button class="btn btn-default">Share on Google+ (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.googlePlus(url,null,null,true);</pre>
+            <button class="btn btn-default">Share on Google+ (new window)</button>
+        </div>
+
+        <!-- Email -->
+
+        <h3 class="new-sec"><a name="googleplus"></a>Email</h3>
+        <code>SharePopUp.email ( to , cc , bcc , subject , body [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.email(email,null,null,title,text);</pre>
+            <button class="btn btn-default">Share on Email</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Basic Example with CC and BCC:</p>
+            <pre class="prettyprint">SharePopUp.email(email,cc,bcc,title,text);</pre>
+            <button class="btn btn-default">Share on Email (w/ cc & bcc)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.email(email,cc,null,title,text,1024,768);</pre>
+            <button class="btn btn-default">Share on Email (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.email(email,cc,null,title,text,null,null,true);</pre>
+            <button class="btn btn-default">Share on Email (new window)</button>
+        </div>
+
+        <!-- Whatsapp -->
+
+        <h3 class="new-sec"><a name="linkedin"></a>Whatsapp</h3>
+        <code>SharePopUp.whatsapp ( text )</code>
+
+        <p>
+            Please note that this function won't perform any validation regarding the device where the app is running or if Whatsapp is installed or not.
+        </p>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.whatsapp(text);</pre>
+            <button class="btn btn-default">Share via Whatsapp</button>
+        </div>
+
+        <!-- SMS -->
+
+        <h3 class="new-sec"><a name="linkedin"></a>SMS</h3>
+        <code>SharePopUp.sms ( text [, phoneNumber ] )</code>
+
+        <p>
+            Please note that this function won't perform any validation regarding the device where the app is running or wether if the device can send SMS's or not.
+        </p>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.sms(text);</pre>
+            <button class="btn btn-default">Share via SMS</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.sms(text,'+1.305.123.4567');</pre>
+            <button class="btn btn-default">Share via SMS (to: +1.305.123.4567)</button>
+        </div>
+
+    </div>
+</main>
+<footer style="margin: 2em 0">
+    <div class="container">
+        <p>
+            <strong>SharePopUp - v1.1</strong>
+            <strong>Author:</strong> Martín Rafael González<br>
+            <a href="http://devtin.io">devtin.io</a>
+        </p>
+    </div>
+</footer>
+<script>
+    var url     = "http://devtin.io",
+        title   = "Professional Lego Player",
+        text    = "Have a look at this website: "+url,
+        image   = "http://devtin.io/wp-content/uploads/2015/03/logo-web-01-150x150.png",
+        email   = "tin@example.com",
+        cc      = "cc@example.com",
+        bcc     = "bcc@example.com";
+
+    $('button').on('click',function() {
+        eval($(this).prev().text());
+    });
+</script>
+</body>
+</html>
