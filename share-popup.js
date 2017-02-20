@@ -60,6 +60,14 @@ SharePopUp.googlePlus = function(url,width,height,blank) {
     this.popup('https://plus.google.com/share?url='+this._rawurlencode(url),width,height,blank);
 };
 
+SharePopUp.tumblr = function(url,width,height,blank) {
+    this.popup('http://www.tumblr.com/share/link?url='+this._rawurlencode(url),width,height,blank);
+};
+
+SharePopUp.reddit = function(url,title,width,height,blank) {
+    this.popup('http://www.reddit.com/submit?url='+this._rawurlencode(url)+'&title='+this._rawurlencode(title||''),width,height,blank);
+};
+
 SharePopUp.email = function(to,cc,bcc,subject,body,width,height,blank) {
     var opts = {
         cc      : cc||'',

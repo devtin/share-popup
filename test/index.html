@@ -32,7 +32,7 @@
 <main>
     <div class="container">
         <h1>SharePopUp - v1.1</h1>
-        <p class="lead">A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn and Google+. Now also via Whatsapp and SMS.</p>
+        <p class="lead">A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn, Tumblr, Reddit and Google+. Now also available via Whatsapp and SMS.</p>
 
         <h2>Usage</h2>
         <ul class="list-style lead">
@@ -41,6 +41,8 @@
             <li><a href="#pinterest">Pinterest</a></li>
             <li><a href="#linkedin">LinkedIn</a></li>
             <li><a href="#googleplus">Google+</a></li>
+            <li><a href="#tumblr">Tumblr</a></li>
+            <li><a href="#reddit">Reddit</a></li>
             <li><a href="#email">E-mail</a></li>
             <li><a href="#whatsapp">Whatsapp</a></li>
             <li><a href="#sms">SMS</a></li>
@@ -170,9 +172,61 @@
             <button class="btn btn-default">Share on Google+ (new window)</button>
         </div>
 
+        <!-- Tumblr -->
+
+        <h3 class="new-sec"><a name="tumblr"></a>Tumblr</h3>
+        <code>SharePopUp.tumblr ( url [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.tumblr(url);</pre>
+            <button class="btn btn-default">Share on Tumblr</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.tumblr(url,1024,768);</pre>
+            <button class="btn btn-default">Share on Tumblr (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.tumblr(url,null,null,true);</pre>
+            <button class="btn btn-default">Share on Tumblr (new window)</button>
+        </div>
+
+        <!-- Reddit -->
+
+        <h3 class="new-sec"><a name="reddit"></a>Reddit</h3>
+        <code>SharePopUp.reddit ( url [, width , height , blank ] )</code>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.reddit(url);</pre>
+            <button class="btn btn-default">Share on Reddit</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Basic Example:</p>
+            <pre class="prettyprint">SharePopUp.reddit(url,title);</pre>
+            <button class="btn btn-default">Share on Reddit (w/ title)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">Bigger Window:</p>
+            <pre class="prettyprint">SharePopUp.reddit(url,title,1024,768);</pre>
+            <button class="btn btn-default">Share on Reddit (bigger window)</button>
+        </div>
+
+        <div class="example">
+            <p class="lead">New Window:</p>
+            <pre class="prettyprint">SharePopUp.reddit(url,null,null,null,true);</pre>
+            <button class="btn btn-default">Share on Reddit (new window)</button>
+        </div>
+
         <!-- Email -->
 
-        <h3 class="new-sec"><a name="googleplus"></a>Email</h3>
+        <h3 class="new-sec"><a name="email"></a>Email</h3>
         <code>SharePopUp.email ( to , cc , bcc , subject , body [, width , height , blank ] )</code>
 
         <div class="example">
@@ -201,7 +255,7 @@
 
         <!-- Whatsapp -->
 
-        <h3 class="new-sec"><a name="linkedin"></a>Whatsapp</h3>
+        <h3 class="new-sec"><a name="whatsapp"></a>Whatsapp</h3>
         <code>SharePopUp.whatsapp ( text )</code>
 
         <p>
@@ -216,7 +270,7 @@
 
         <!-- SMS -->
 
-        <h3 class="new-sec"><a name="linkedin"></a>SMS</h3>
+        <h3 class="new-sec"><a name="sms"></a>SMS</h3>
         <code>SharePopUp.sms ( text [, phoneNumber ] )</code>
 
         <p>

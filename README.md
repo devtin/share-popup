@@ -1,6 +1,6 @@
 # share-popup.js
 
-A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn and Google+. Now also via Whatsapp and SMS.
+A simple JavaScript wrapper for sharing content on different social networks, including: Twitter, Facebook, Pinterest, LinkedIn, Tumblr, Reddit and Google+. Now also available via Whatsapp and SMS.
 
 ## Usage
 
@@ -28,6 +28,8 @@ SharePopUp.facebook ( url [, width , height , blank ] )
 SharePopUp.pinterest ( url , imageUrl , description [, width , height , blank ] )
 SharePopUp.linkedIn ( url , tittle , summary , source [, width , height , blank ] )
 SharePopUp.googlePlus ( url [, width , height , blank ] )
+SharePopUp.tumblr ( url [, width , height , blank ] )
+SharePopUp.reddit ( url [, title , width , height , blank ] )
 SharePopUp.email ( to , cc , bcc , subject , body [, width , height , blank ] )
 
 
